@@ -20,7 +20,9 @@ if (!isset($_SESSION['admin_logged'])) {
 <body>
   <?php include "./components/navbar.php" ?>
   <div class="flex justify-center mt-[3rem]">
-    <form class="flex flex-col" method="get" action="../src/controller/books_controller.php">
+    <form class="flex flex-col" method="post" action="../src/controller/books_controller.php">
+      <label for="book_id"></label>
+      <input hidden id="book_id" name="book_id" value="<?= $_GET['id'] ?>" />
       <label for="title">Titre du livre</label>
       <input class="mt-[0.2rem] outline-[0.2rem] outline-[#803642] rounded-sm" type="text" id="title" name="title" value="<?= $_GET['title'] ?>" />
       <label class="mt-[1.5rem]" for="category">Categorie</label>
