@@ -17,8 +17,9 @@ if (isset($_GET['managebtn']) && $_GET['managebtn'] == "listaddedbook") : ?>
     <label class="mt-[1.5rem]" for="author">Auteur</label>
     <select class="outline-[0.2rem] outline-[#803642] rounded-sm mt-[0.2rem]" id="author" name="author">
       <option disabled selected>Selectionnez un auteur</option>
-      <option value="author1">auteur exemple 1</option>
+      <?php get_select_authors_names() ?>
     </select>
+    <button class="mt-[2rem] bg-[#803642] p-[0.3rem] w-[min-content self-center rounded-sm text-white cursor-pointer">Ajouter</button>
   </form>
 
 <?php endif; ?>

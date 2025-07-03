@@ -188,6 +188,9 @@
   .mt-\[3rem\] {
     margin-top: 3rem;
   }
+  .mt-\[4rem\] {
+    margin-top: 4rem;
+  }
   .mt-\[5rem\] {
     margin-top: 5rem;
   }
@@ -221,6 +224,9 @@
   .w-\[100\%\] {
     width: 100%;
   }
+  .w-\[min-content\] {
+    width: min-content;
+  }
   .w-md {
     width: var(--container-md);
   }
@@ -253,6 +259,9 @@
   }
   .gap-\[5rem\] {
     gap: 5rem;
+  }
+  .self-center {
+    align-self: center;
   }
   .rounded {
     border-radius: 0.25rem;

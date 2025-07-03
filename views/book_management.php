@@ -1,4 +1,5 @@
 <?php
+include "../src/services/get_authors.php";
 session_start();
 var_dump($_SESSION);
 if (!isset($_SESSION['admin_logged'])) {
@@ -25,7 +26,7 @@ if (!isset($_SESSION['admin_logged'])) {
       <button name="managebtn" value="manageauthors" class="bg-[#803642] p-[0.5rem] rounded-sm cursor-pointer">Gérer les auteurs</button>
     </form>
   </div>
-  <div class="flex justify-center mt-[2rem]">
+  <div class="flex justify-center mt-[4rem]">
     <?php include "./components/book_management_compo.php" ?>
   </div>
 </body>

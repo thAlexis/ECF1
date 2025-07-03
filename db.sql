@@ -31,3 +31,6 @@ CREATE TABLE books (
 );
 
 INSERT INTO admins VALUES (NULL, "Wick", "John", "wickjohn@outlook.com", "babayaga");
+
+INSERT INTO authors VALUES (NULL, "Harlan Coben", "France");
+INSERT INTO authors VALUES (NULL, "Georges R.R. Martin", "Irlande");
