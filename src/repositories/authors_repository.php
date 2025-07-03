@@ -1,6 +1,6 @@
 <?php
 
-include __DIR__ . "/../config/connection.php";
+include_once __DIR__ . "/../config/connection.php";
 
 function select_authors_names()
 {
@@ -14,3 +14,17 @@ function select_authors_names()
     echo "\nErreur : problème de connexion avec la base de données." . $ex->getMessage();
   };
 };
+
+function select_author_id($authorname)
+{
+  try {
+    $pdo = get_connection_to_db();
+    $select = "SELECT id FROM authors WHERE full_name = :authorname";
+    $select_query = $pdo->prepare($select);
+    $select_query->bindValue(":authorname", $authorname);
+    $select_query->execute();
+    return $select_query->fetch();
+  } catch (PDOException $ex) {
+    echo "\nErreur : problème de connexion avec la base de données." . $ex->getMessage();
+  };
+}
