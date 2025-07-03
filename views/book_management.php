@@ -1,5 +1,6 @@
 <?php
 include "../src/services/get_authors.php";
+include "../src/services/get_books.php";
 session_start();
 var_dump($_SESSION);
 if (!isset($_SESSION['admin_logged'])) {

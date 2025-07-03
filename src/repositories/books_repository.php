@@ -19,3 +19,17 @@ function add_book_to_db($adminid, $authorid, $title, $category, $pub_date, $summ
     echo "\nErreur : problème de connexion avec la base de données." . $ex->getMessage();
   };
 }
+
+function select_book_by_adminid($adminid)
+{
+  try {
+
+    $pdo = get_connection_to_db();
+    $select = "SELECT title, authors.full_name, category, publication_date, summary FROM books JOIN authors ON books.authorId = authors.id WHERE adminId = $adminid";
+    $select_query = $pdo->prepare($select);
+    $select_query->execute();
+    return $select_query->fetchAll();
+  } catch (PDOException $ex) {
+    echo "\nErreur : problème de connexion avec la base de données." . $ex->getMessage();
+  };
+}

@@ -1,6 +1,11 @@
 <?php
 if (isset($_GET['managebtn']) && $_GET['managebtn'] == "listaddedbook") : ?>
+  <div>
+    <ul>
+      <?php display_books() ?>
+    </ul>
 
+  </div>
 <?php elseif (isset($_GET['managebtn']) && $_GET['managebtn'] == "addbook") : ?>
   <form class="flex flex-col" method="post" action="../src/controller/books_controller.php">
     <label for="title">Titre du livre</label>
