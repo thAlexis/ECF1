@@ -27,3 +27,10 @@ if (str_contains($_SERVER['HTTP_REFERER'], "modify_book_form")) {
   header("location: ../../views/book_management.php?managebtn=listaddedbook");
   die();
 }
+
+if (str_contains($_SERVER['HTTP_REFERER'], "delete_page")) {
+  $bookid = $_POST['book_id'];
+  delete_book($bookid);
+  header("location: ../../views/book_management.php?managebtn=listaddedbook");
+  die();
+}

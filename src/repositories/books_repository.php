@@ -65,3 +65,16 @@ function update_book($bookid, $authorid, $title, $category, $pub_date, $summary)
     echo "\nErreur : problème de connexion avec la base de données." . $ex->getMessage();
   };
 }
+
+function delete_book($bookid)
+{
+  try {
+    $pdo = get_connection_to_db();
+    $delete = "DELETE FROM books WHERE id = :bookid";
+    $delete_query = $pdo->prepare($delete);
+    $delete_query->bindValue(":bookid", $bookid);
+    $delete_query->execute();
+  } catch (PDOException $ex) {
+    echo "\nErreur : problème de connexion avec la base de données." . $ex->getMessage();
+  }
+}
