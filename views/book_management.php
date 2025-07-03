@@ -22,9 +22,9 @@ if (!isset($_SESSION['admin_logged'])) {
   <?php include "./components/navbar.php" ?>
   <div class="flex justify-center">
     <form class="flex gap-[5rem] mt-[5rem] text-white" method="get" action="./book_management.php">
-      <button name="managebtn" value="listaddedbook" class="bg-[#803642] p-[0.5rem] rounded-sm cursor-pointer">Consulter mes livres ajoutés</button>
-      <button name="managebtn" value="addbook" class="bg-[#803642] p-[0.5rem] rounded-sm cursor-pointer">Ajouter un nouveau livre</button>
-      <button name="managebtn" value="manageauthors" class="bg-[#803642] p-[0.5rem] rounded-sm cursor-pointer">Gérer les auteurs</button>
+      <button name="managebtn" value="listaddedbook" class="bg-[#803642] p-[0.5rem] shadow-md rounded-sm cursor-pointer">Consulter mes livres ajoutés</button>
+      <button name="managebtn" value="addbook" class="bg-[#803642] p-[0.5rem] rounded-sm shadow-md cursor-pointer">Ajouter un nouveau livre</button>
+      <button name="managebtn" value="manageauthors" class="bg-[#803642] p-[0.5rem] shadow-md rounded-sm cursor-pointer">Gérer les auteurs</button>
     </form>
   </div>
   <div class="flex justify-center mt-[4rem]">
